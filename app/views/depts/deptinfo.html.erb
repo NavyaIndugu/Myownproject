@@ -1,13 +1,1 @@
-
-<%= nav_bar static: :bottom, brand: "Hogwarts University" do %>
-    <%= menu_group do %>
-        <%= menu_item "Home", root_path %>
-        <%= menu_item "About Us", depts_aboutus_path %>
-        <%= menu_item "Contact", depts_contact_path %>
-    <% end %>
-    <% end %>
-<h4>
-<center>
-<%= link_to "Here is department list",depts_path %>
-</center>
-</h4>
+<%= render 'nav' %>

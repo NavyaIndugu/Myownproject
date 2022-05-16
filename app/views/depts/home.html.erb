@@ -1,3 +1,13 @@
+<%= render 'nav' %>
+<br>
+<center>
+<h2>
+<%= current_user.email %>
+</h2>
+<h3> is active now<br> you can continue to  </h3>
+<h3><%= link_to "DepartmentInformation", depts_path %></h3>
+</center>
+<br>
 <br>
 <br>
 <br>
@@ -9,6 +19,7 @@
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <% else %>
 <%= link_to('Login', new_user_session_path) %>
+<br>
 <%= link_to('Register', new_user_registration_path) %>
 <% end %>
 </header>

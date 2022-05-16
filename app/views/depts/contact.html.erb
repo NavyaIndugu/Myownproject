@@ -1,18 +1,6 @@
-<%= nav_bar fixed: :bottom, brand: "Hogwarts University" do %>
 
-    <%= menu_group do %>
-    
-    <%= menu_item "Home", root_path %>
-    
-    <%= menu_item "About Us", depts_aboutus_path %>
-    
-    <%= menu_item "Contact", depts_contact_path %>
-    
-    <%= menu_item "Depts Information", depts_path %>
-    
-    <% end %>
-    
-    <% end %>
+<center>
+<%= render 'nav' %>
     
     <br>
     
@@ -75,12 +63,15 @@ color: white;
 
 <strong>
 
-<a href="https://www.facebook.com/TheHogwartsSchool/" class="fa fa-facebook"><h5>Hogwarts University</h5></a>
+<a href="https://www.facebook.com/TheHogwartsSchool/" class="fa fa-facebook"><h5>XYZ University</h5></a>
 
-<a href="https://twitter.com/wizardingworld?lang=en" class="fa fa-twitter"><h5>Hogwarts University</h5></a>
+<a href="https://twitter.com/wizardingworld?lang=en" class="fa fa-twitter"><h5>XYZ University</h5></a>
 
 </strong>
 
 </body>
-
+<h3>
+<%= link_to "Home" ,root_path %>
+</h3>
+</center>
 </html>

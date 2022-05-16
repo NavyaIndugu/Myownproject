@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   get 'depts/aboutus'
   get 'depts/contact'
   get 'depts/deptinfo'
+  get 'depts/home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #devise_for :users
-  root to: "depts#deptinfo"
+  root to: "depts#home"
   resources :depts do
    
    member do

@@ -1,28 +1,36 @@
-<center>
-<h2>Log in</h2>
-<div style="width:400px; margin:0px auto; padding:20px; text-align:center; background:lavender; color:black;" >
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="row">
+  <div class="col-md-6 col-lg-8">
+    <table class="table table-sm">
+      <thead>
+      <img src = "https://miro.medium.com/max/1400/1*IaJDifEjoa2u3v2WBMe-bA.png" width="850",
+     height="450" >
+      </thead>
+    </table>
   </div>
+  <div class="col-md-6 col-lg-4">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "border shadow-sm rounded p-3 mb-3" } ) do |f| %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "current-password" %>
+      <div class="form-group">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
 </div>
-<%= render "devise/shared/links" %>
-</center>
